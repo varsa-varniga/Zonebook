@@ -8,14 +8,17 @@ import CreditsInfo from './pages/CreditsInfo.jsx';
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Login from "./connections/Login";
+import FAQ from './pages/FAQ.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar/>
-    <Plans />
-    <Credits/>
-    <CreditsInfo/>
-    <Login />
+    {/* <Plans />
+    <Credits/> */}
+    <FAQ/>
+    {/* <CreditsInfo/>
+    <Login /> */}
+    
     <Footer/>
   </StrictMode>,
 )
