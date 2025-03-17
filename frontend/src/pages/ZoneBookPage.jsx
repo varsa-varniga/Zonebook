@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Revenue from "../pages/Revenue";
+import activity from "../assets/images/activity.png";
 
 const ZoneBookPage = () => {
   return (
@@ -41,12 +42,12 @@ const ZoneBookPage = () => {
           }}
         >
           <img
-            src="/assets/image1.jpg"
+            src={activity}
             alt="Gym Image 1"
             style={{ width: "100%", borderRadius: "8px" }}
           />
           <img
-            src="/assets/activity."
+            src="/assets/activity.png"
             alt="Gym Image 2"
             style={{ width: "100%", borderRadius: "8px" }}
           />

@@ -12,6 +12,11 @@ import FAQ from './pages/FAQ.jsx';
 import UseCredit from './pages/Usecredit.jsx';
 import Revenue from "./pages/Revenue.jsx";
 import ZoneBookPage from './pages/ZoneBookPage.jsx';
+import Swipe from './pages/module/swipe.jsx';
+import RequestDemo from './pages/RequestDemo/Request.jsx';
+import Update from './pages/Update/Update.jsx';
+
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -27,5 +32,18 @@ createRoot(document.getElementById('root')).render(
     <Footer/>
      <Revenue/>
     <ZoneBookPage/>
+    {/* <Plans />
+    <Credits/> */}
+    <FAQ/>
+    {/* <CreditsInfo/>
+    <Login /> */}
+    <Swipe/>
+    <RequestDemo/>
+    <Update/>
+   
+    <Footer/>
+    
+   
+  
   </StrictMode>,
 )
