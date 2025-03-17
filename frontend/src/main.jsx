@@ -9,6 +9,12 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Login from "./connections/Login";
 import FAQ from './pages/FAQ.jsx';
+import Swipe from './pages/module/swipe.jsx';
+import RequestDemo from './pages/RequestDemo/Request.jsx';
+import Update from './pages/Update/Update.jsx';
+
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,7 +24,13 @@ createRoot(document.getElementById('root')).render(
     <FAQ/>
     {/* <CreditsInfo/>
     <Login /> */}
-    
+    <Swipe/>
+    <RequestDemo/>
+    <Update/>
+   
     <Footer/>
+    
+   
+  
   </StrictMode>,
 )
