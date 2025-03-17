@@ -9,16 +9,23 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Login from "./connections/Login";
 import FAQ from './pages/FAQ.jsx';
+import UseCredit from './pages/Usecredit.jsx';
+import Revenue from "./pages/Revenue.jsx";
+import ZoneBookPage from './pages/ZoneBookPage.jsx';
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar/>
-    {/* <Plans />
-    <Credits/> */}
-    <FAQ/>
-    {/* <CreditsInfo/>
-    <Login /> */}
+    <Plans />
+    <Credits/>
     
+    <CreditsInfo/>
+    <Login />
+    <FAQ/>
+    <UseCredit/>
     <Footer/>
+     <Revenue/>
+    <ZoneBookPage/>
   </StrictMode>,
 )
