@@ -12,9 +12,11 @@ import FAQ from './pages/FAQ.jsx';
 import UseCredit from './pages/Usecredit.jsx';
 import Revenue from "./pages/Revenue.jsx";
 import ZoneBookPage from './pages/ZoneBookPage.jsx';
-import Swipe from './pages/module/swipe.jsx';
-import RequestDemo from './pages/RequestDemo/Request.jsx';
-import Update from './pages/Update/Update.jsx';
+import Questions from "./pages/Questions.jsx";
+import Waiting from './pages/Waiting.jsx';
+import DemoForm from './pages/Demoform.jsx';
+import SmartTools from './pages/SmartTools.jsx';
+import Partner from './pages/Partner.jsx';
 
 
 
@@ -29,20 +31,14 @@ createRoot(document.getElementById('root')).render(
     <Login />
     <FAQ/>
     <UseCredit/>
-    <Footer/>
+    <Partner/>
+    <SmartTools/>
      <Revenue/>
-    <ZoneBookPage/>
-    {/* <Plans />
-    <Credits/> */}
-    <FAQ/>
-    {/* <CreditsInfo/>
-    <Login /> */}
-    <Swipe/>
-    <RequestDemo/>
-    <Update/>
-   
+     <DemoForm/>
+    {/* <ZoneBookPage/> */}
+    <Questions/>
+    <Waiting/>
     <Footer/>
-    
    
   
   </StrictMode>,

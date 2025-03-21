@@ -74,7 +74,7 @@ const FAQ = () => {
 
   return (
     <Container maxWidth="md" sx={{ py: 4 }} >
-      <Typography variant="h4" align="center" gutterBottom sx={{color:"green"}}>
+      <Typography variant="h4" align="center" gutterBottom sx={{color:"#5a6548"}}>
         Freqently Asked Questions
       </Typography>
       {faqData.map((faq) => (
@@ -90,11 +90,14 @@ const FAQ = () => {
           }}
         >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography variant="h6">{faq.question}</Typography>
+            <Typography variant="h7">{faq.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body1">{faq.description}</Typography>
-          </AccordionDetails>
+  <Typography variant="body1" sx={{ fontSize: "12px" }}>
+    {faq.description}
+  </Typography>
+</AccordionDetails>
+
         </Accordion>
       ))}
     </Container>

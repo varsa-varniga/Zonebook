@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Revenue from "../pages/Revenue";
-import activity from "../assets/images/activity.png";
+import activity from "../assets/activity.png";
 
 const ZoneBookPage = () => {
   return (
