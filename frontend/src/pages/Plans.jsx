@@ -12,7 +12,8 @@ const plans = [
 
 const Plans = () => {
   return (
-    <Container sx={{ textAlign: "center", my: 5 }}>
+    <Container sx={{ textAlign: "center", my: 5, maxWidth: "lg" }}>
+
       {/* Header & Try for Free Button in the Same Line */}
       <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 3 }}>
         {/* Centered Available Plans */}
@@ -42,7 +43,7 @@ const Plans = () => {
       {/* Plans Grid */}
       <Grid container spacing={2} justifyContent="center">
         {plans.map((plan, index) => (
-          <Grid item key={index} xs={12} sm={6} md={2.2}>
+          <Grid item key={index} xs={16} sm={10} md={2.2}>
             <Paper
               sx={{
                 p: 2.5,
@@ -50,7 +51,7 @@ const Plans = () => {
                 backgroundColor: "#F6F9FC",
                 color: "black",
                 borderRadius: "10px",
-                minHeight: "90px",
+                Height: "130px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
