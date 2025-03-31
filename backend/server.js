@@ -17,6 +17,16 @@ const updateRoutes = require("./routes/UpdateRoutes");
 app.use("/api/demo", demoRoutes);
 app.use("/api/update",updateRoutes);
 
+const userRoutes = require('./routes/UserRoutes');
+const mapRoutes = require('./routes/MapRoutes');
+const companiesRoutes = require('./routes/CompaniesRoutes');
+const resourcesRoutes = require('./routes/ResourcesRoutes');
+
+app.use("/api/user",userRoutes);
+app.use("/api/map",mapRoutes);
+app.use("/api/companies",companiesRoutes);
+app.use("/api/resources",resourcesRoutes);
+
 
 // Start Server
 app.listen(PORT, () => {
