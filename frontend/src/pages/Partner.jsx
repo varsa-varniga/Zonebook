@@ -1,98 +1,146 @@
+
 import React, { useState } from "react";
-import { Box, Typography, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, Button, Grid, Typography, Container } from "@mui/material";
+
+// Importing local images from assets folder
+import Profile1 from "../assets/profile-1.jpeg";
+import Profile2 from "../assets/profile-3.jpeg";
+import Profile3 from "../assets/profile1.jpeg";
 
 const Partner = () => {
-  const [selected, setSelected] = useState("business");
-
-  const handleToggle = (event, newSelection) => {
-    if (newSelection !== null) {
-      setSelected(newSelection);
-    }
-  };
-
+  
+  const [activeButton, setActiveButton] = useState("business");
   return (
-    <Box
+    <Container maxWidth="lg" sx={{ textAlign: "center", py: 4 }}>
+      {/* ZoneBook Partnering Section */}
+      <Typography variant="h4" fontWeight="bold" gutterBottom>
+        How partnering with <br />ZoneBook works
+      </Typography>
+      <Typography variant="body1" color="textSecondary" sx={{ mb: 4 }}>
+        Find out how to list your classes and appointments on ZoneBook to scale your business.
+      </Typography>
+
+      <Box
       sx={{
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        textAlign: "center",
-        maxWidth: "400px",
+        justifyContent: "center",
+        gap: 0,
+        mb: 4,
+        p: 1,
+        borderRadius: 25,
+        border: "1px solid #ddd",
+        backgroundColor: "#fff",
+        width: "fit-content",
         mx: "auto",
-        mt: 4, // Adds spacing from top
       }}
     >
-      <Typography variant="h4" fontWeight={400}>
-        How partnering with ZoneBook works
-      </Typography>
-      <Typography variant="body2" sx={{ fontSize: "12px", mt: 1 }}>
-        Find out how to list your classes and appointments to scale your business
-      </Typography>
-
-      {/* Toggle Buttons - Centered Below */}
-      <Box
+      <Button
+        onClick={() => setActiveButton("business")}
+        variant={activeButton === "business" ? "contained" : "text"}
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          mt: 3,
+          borderRadius: 20,
+          px: 4,
+          py: 1,
+          color: activeButton === "business" ? "#fff" : "#000",
+          backgroundColor: activeButton === "business" ? "#4d6241" : "transparent",
+          textTransform: "none",
+          "&:hover": {
+            backgroundColor: activeButton === "business" ? "#3e5035" : "#f0f0f0",
+          },
         }}
       >
-        <ToggleButtonGroup
-          value={selected}
-          exclusive
-          onChange={handleToggle}
+        For Business
+      </Button>
+
+      <Button
+        onClick={() => setActiveButton("members")}
+        variant={activeButton === "members" ? "contained" : "text"}
+        sx={{
+          borderRadius: 20,
+          px: 4,
+          py: 1,
+          color: activeButton === "members" ? "#fff" : "#000",
+          backgroundColor: activeButton === "members" ? "#4d6241" : "transparent",
+          textTransform: "none",
+          "&:hover": {
+            backgroundColor: activeButton === "members" ? "#3e5035" : "#f0f0f0",
+          },
+        }}
+      >
+        For Zone Book Members
+      </Button>
+    </Box>
+      {/* Image Cards */}
+      <Grid container spacing={4} justifyContent="center">
+        <Grid item xs={12} md={4}>
+          <Box sx={{ borderRadius: 2, overflow: "hidden" }}>
+            <img
+              src={Profile1}
+              alt="Sign up for free"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
+              Sign up for free
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Fill out the form to become a ClassPass partner at no cost to you.
+            </Typography>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Box sx={{ borderRadius: 2, overflow: "hidden" }}>
+            <img
+              src={Profile2}
+              alt="Build your profile"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
+              Build your profile
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Sync your booking system and add details of your business such as photos and descriptions of your services and amenities.
+            </Typography>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Box sx={{ borderRadius: 2, overflow: "hidden" }}>
+            <img
+              src={Profile3}
+              alt="Increase revenue"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
+              Increase revenue
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Fill open spots, protect your direct member reservations and earn more with SmartTools.
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+
+      {/* Get Started Button */}
+      <Box sx={{ mt: 4 }}>
+        <Button
+          variant="contained"
           sx={{
-            borderRadius: "25px",
-            backgroundColor: "#fff",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Soft shadow
-            p: 0.5,
-            height: "40px",
+            borderRadius: 20,
+            backgroundColor: "#4d6241",
+            px: 4,
+            color: "#fff",
+            "&:hover": {
+              backgroundColor: "#3e5035",
+            },
           }}
         >
-          <ToggleButton
-            value="business"
-            sx={{
-              textTransform: "none",
-              backgroundColor: selected === "business" ? "#5a6548" : "transparent",
-              color: selected === "business" ? "white" : "black",
-              borderRadius: "25px",
-              fontSize: "14px",
-              fontWeight: "500",
-              px: 3,
-              "&:hover": {
-                backgroundColor: selected === "business" ? "#4c5b3e" : "#f8f8f8",
-              },
-              "&.Mui-selected": {
-                border: "none", // Remove default outline
-              },
-            }}
-          >
-            For businesses
-          </ToggleButton>
-
-          <ToggleButton
-            value="members"
-            sx={{
-              textTransform: "none",
-              backgroundColor: selected === "members" ? "#5a6548" : "transparent",
-              color: selected === "members" ? "white" : "black",
-              borderRadius: "25px",
-              fontSize: "14px",
-              fontWeight: "500",
-              px: 3,
-              "&:hover": {
-                backgroundColor: selected === "members" ? "#4c5b3e" : "#f8f8f8",
-              },
-              "&.Mui-selected": {
-                border: "none", // Remove default outline
-              },
-            }}
-          >
-            For ZoneBook members
-          </ToggleButton>
-        </ToggleButtonGroup>
+          Get Started
+        </Button>
       </Box>
-    </Box>
+
+      
+    </Container>
   );
 };
 
