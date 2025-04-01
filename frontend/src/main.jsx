@@ -17,6 +17,7 @@ import Earn from './pages/Earn.jsx';
 import HowItWorks from './components/HowItWorks.jsx';
 import SubNavbar from './components/SubNavbar.jsx';
 import MapSection from './components/Map.jsx';
+import HeroPage from './pages/Heropage.jsx'
 
 // Component to handle dynamic SubNavbar display
 const Layout = () => {
@@ -37,7 +38,9 @@ const Layout = () => {
       <Navbar />
       {showSubNavbar && <SubNavbar />}
       <Routes>
-        <Route path="/" element={<App />} />
+    
+        <Route index element={<HeroPage />} />
+        <Route path="/" element={<HeroPage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/map" element={<MapSection />} />
         <Route path="/plans" element={<Plans />} />
@@ -55,6 +58,7 @@ const Layout = () => {
         <Route path="/resource" element={<Earn />} />
       </Routes>
       <Footer />
+      
     </>
   );
 };
