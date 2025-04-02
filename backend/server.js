@@ -11,21 +11,24 @@ db();
 app.use(express.json());  // Ensures server can read JSON requests
 app.use(cors());
 
-<<<<<<< HEAD
-=======
 // Routes
 const demoRoutes = require("./routes/demoRoutes");
 const updateRoutes = require("./routes/UpdateRoutes");
 app.use("/api/demo", demoRoutes);
 app.use("/api/update",updateRoutes);
 
->>>>>>> d4d848ddb1e2ccf2d55c1f9c179a6af4b580ca9b
+const userRoutes = require('./routes/UserRoutes');
+const mapRoutes = require('./routes/MapRoutes');
+const companiesRoutes = require('./routes/CompaniesRoutes');
+const resourcesRoutes = require('./routes/ResourcesRoutes');
+
+app.use("/api/user",userRoutes);
+app.use("/api/map",mapRoutes);
+app.use("/api/companies",companiesRoutes);
+app.use("/api/resources",resourcesRoutes);
+
 
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> d4d848ddb1e2ccf2d55c1f9c179a6af4b580ca9b
