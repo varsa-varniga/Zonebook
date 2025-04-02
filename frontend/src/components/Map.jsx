@@ -69,7 +69,7 @@ const MapSection = () => {
           title="OpenStreetMap"
           width="100%"
           height="100%"
-          src="https://www.openstreetmap.org/export/embed.html"
+         src="https://www.openstreetmap.org/export/embed.html?bbox=-0.09,51.50,0.09,51.51&layer=mapnik"
           style={{ border: "none" }}
         ></iframe>
       </Box>
