@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Box } from '@mui/material';
 import Navbar from '../../components/navbarListmybuisness';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import ArticleCard from '../../components/articleCard';
 import Newsletter from '../../components/newLetter';
 import articles from '../../components/articles';
@@ -41,7 +41,7 @@ const ListofMyBuisnessBlog = () => {
           </Grid>
         </Grid>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

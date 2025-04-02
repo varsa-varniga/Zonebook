@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 // import App from './App.jsx'
 import Plans from './pages/Plans.jsx';
+import Partner from './pages/Partner.jsx';
 import Credits from './pages/Credits.jsx'
 import CreditsInfo from './pages/CreditsInfo.jsx';
 import Navbar from "./components/Navbar.jsx";
@@ -13,9 +14,10 @@ import UseCredit from './pages/Usecredit.jsx';
 import Revenue from "./pages/Revenue.jsx";
 import ZoneBookPage from './pages/ZoneBookPage.jsx';
 import Swipe from './pages/module/swipe.jsx';
-import RequestDemo from './pages/RequestDemo/Request.jsx';
-// import Update from './pages/Update/Update.jsx';
+import SmartTools from './pages/SmartTools.jsx';
 import ListofMyBuisnessBlog from './pages/ListMyBuisness/blog.jsx';
+// import RequestDemo from './pages/RequestDemo/Request.jsx';
+// import Update from './pages/Update/Update.jsx';
 
 
 
@@ -30,7 +32,8 @@ createRoot(document.getElementById('root')).render(
     <Login />
     <FAQ/>
     <UseCredit/>
-    <Footer/>
+    <Partner/>
+    <SmartTools/>
      <Revenue/>
     <ZoneBookPage/>
     {/* <Plans />
@@ -39,10 +42,9 @@ createRoot(document.getElementById('root')).render(
     {/* <CreditsInfo/>
     <Login /> */}
     <Swipe/>
-    <RequestDemo/>
+    {/* <RequestDemo/> */}
     {/* <Update/> */}
     <ListofMyBuisnessBlog/>
-    
    
     <Footer/>
     
