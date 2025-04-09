@@ -31,7 +31,7 @@ const Login = () => {
         maxWidth="xs"
         sx={{
          
-        width:300,
+        width:400,
           p: 2,
           borderRadius: 1,
           boxShadow: 0,

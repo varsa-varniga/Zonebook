@@ -12,7 +12,8 @@ const plans = [
 
 const Plans = () => {
   return (
-    <Container sx={{ textAlign: "center", my: 5 }}>
+    <Container sx={{ textAlign: "center", my: 5, maxWidth: "lg" }}>
+
       {/* Header & Try for Free Button in the Same Line */}
       <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 3 }}>
         {/* Centered Available Plans */}
@@ -28,11 +29,10 @@ const Plans = () => {
             backgroundColor: "#4A5D3A",
             color: "white",
             fontWeight: "bold",
-            borderRadius: "0px",
-            padding: "6px 16px",
+            borderRadius: "10px",
+            padding: "5px 12px",
             textTransform: "none",
             fontSize: "14px",
-           
             "&:hover": { backgroundColor: "#3A4D2A" },
           }}
         >
@@ -43,37 +43,37 @@ const Plans = () => {
       {/* Plans Grid */}
       <Grid container spacing={2} justifyContent="center">
         {plans.map((plan, index) => (
-          <Grid item key={index} xs={12} sm={6} md={2.2}>
+          <Grid item key={index} xs={16} sm={10} md={2.2}>
             <Paper
               sx={{
                 p: 2.5,
                 textAlign: "center",
-                backgroundColor: "#F7F7F7",
+                backgroundColor: "#F6F9FC",
                 color: "black",
-                borderRadius: "3px",
-                minHeight: "150px",
+                borderRadius: "10px",
+                Height: "130px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
                 transition: "transform 0.3s ease, background-color 0.3s ease, color 0.3s ease",
+                boxShadow: "none", 
                 "&:hover": {
                   backgroundColor: "#4A5D3A",
                   color: "white",
-                  transform: "scale(1.12)", 
+                  transform: "scale(1.12)",
                 },
                 "&:hover .price-box": {
                   backgroundColor: "white",
                   color: "#4A5D3A",
-                  
                   borderColor: "white",
-                  cursor:"pointer"
+                  cursor: "pointer",
                 },
               }}
             >
               <Typography variant="h6" fontWeight="bold">
                 {plan.credits} Credits
               </Typography>
-              <Typography variant="body2" sx={{ opacity: 0.8 }}>
+              <Typography variant="body1" sx={{ opacity: 0.8, fontSize: 10 }}>
                 Libero nunc facilisis auctor diam suspendisse pharetra nisi. Mauris ornare imperdiet.
               </Typography>
 
@@ -82,16 +82,15 @@ const Plans = () => {
                 className="price-box"
                 sx={{
                   mt: 2,
-                  border: "1px solid black",
+                  border: "1.8px solid #5F6F52",
                   color: "black",
-                  fontSize: "14px",
+                  fontSize: "12px",
                   textAlign: "center",
-                  fontWeight: "bold", 
-                 
-                  alignItems:"center",
-                  justifyContent:"center",
-                  borderRadius: "2px",
-                  padding: "6px 12px",
+                  fontWeight: "bold",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                  padding: "4px 8px",
                   display: "flex",
                   transition: "all 0.3s ease",
                 }}

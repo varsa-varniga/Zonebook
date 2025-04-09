@@ -7,8 +7,11 @@ import {
   Button,
   Container,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
 
 const Thank = () => {
+  const navigate = useNavigate(); // ✅ Initialize navigate
+
   return (
     <Box sx={{ height: "100vh", backgroundColor: "#fff" }}>
       {/* Navbar */}
@@ -81,6 +84,7 @@ const Thank = () => {
         {/* Back Button */}
         <Button
           variant="contained"
+          onClick={() => navigate("/")} // ✅ Navigate to home
           sx={{
             backgroundColor: "#4d6241",
             color: "#fff",
