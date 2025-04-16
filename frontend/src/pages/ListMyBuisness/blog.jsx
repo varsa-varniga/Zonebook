@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Box } from '@mui/material';
-import Navbar from '../../components/navbarListmybuisness';
+// import Navbar from '../../components/navbarListmybuisness';
 // import Footer from '../../components/Footer';
 import ArticleCard from '../../components/articleCard';
 import Newsletter from '../../components/newLetter';
@@ -9,7 +9,7 @@ import articles from '../../components/articles';
 const ListofMyBuisnessBlog = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container sx={{ mt: 4, mb: 4 }}>
         <Grid container spacing={4}>
           {/* Main Article */}
