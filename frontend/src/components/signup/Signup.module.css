@@ -1,0 +1,698 @@
+/* These styles maintain your existing horizontal layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+  width: 90%;
+  gap: 0; /* Remove any default gap */
+}
+
+.leftSection {
+  width: 60%;
+  padding: 2rem 5rem 2rem 2rem; /* Much reduced right padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left instead of center */
+  text-align: center; /* Left-align text */
+  margin-left: 90px;
+}
+.title {
+  width: 100%;
+  text-align: center; /* Centers the text */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.rightSection {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.formContainer {
+  max-width: 26rem;
+  width: 100%;
+  text-align: center;
+}
+
+.trialBadge {
+  background-color: #eef2ff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.iconLarge {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 10px;
+}
+
+.priceTerm {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.iconCircle1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon1 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.benefitText {
+  font-size: 0.9rem;
+  color: #374151;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items */
+  gap: 1rem; /* Adds equal spacing between items */
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input {
+  width: 75%; /* Reduce input width */
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.primaryButton {
+  width: 80%; /* Match input width */
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background-color: #1e40af;
+}
+
+.secondaryButton {
+  width: 80%; /* Match input width */
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.secondaryButton:hover {
+  background-color: #f3f4f6;
+}
+
+.orDivider {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.textMuted {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.textSmall {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: underline;
+  color: #6b7280;
+}
+
+.changeLink {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.changeLink:hover {
+  text-decoration: underline;
+}
+.container1 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.title1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.reminderSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reminderText {
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.progressLine {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  right: 12px;
+  height: 4px;
+  background-color: #e0e0ff;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.lockIcon,
+.shieldIcon {
+  z-index: 1;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timelineLabels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}
+
+.startLabel,
+.billedLabel {
+  font-size: 0.9rem;
+  color: #666;
+  flex-basis: 50%;
+}
+
+.startLabel {
+  text-align: left;
+}
+
+.billedLabel {
+  text-align: right;
+}
+
+.description {
+  max-width: 700px;
+  margin: 2rem auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.plansTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 9rem 0 0;
+  color: #333;
+}
+
+.plansContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.planCard {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.planCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.planPrice {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}
+
+.perMonth {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.25rem 0 1.5rem;
+}
+
+.planDescription {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+.container2 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.heading2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 280px;
+}
+
+.circleImage {
+  margin-bottom: 15px;
+}
+
+.featureText {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+.container3 {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.contentSection {
+  flex: 1;
+  max-width: 500px;
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.featureImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.heading3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.featureGroup {
+  margin-bottom: 24px;
+}
+
+.featureTitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.featureDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+.container4 {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+.largeImageWrapper {
+  flex: 1; /* Adjusts based on available space */
+  max-width: 50%; /* Ensures it does not exceed half */
+  display: flex;
+  justify-content: center;
+}
+
+.largeImage {
+  width: 100%; /* Ensures it fits within its container */
+  height: auto;
+}
+
+.contentSection {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.benefitIcon {
+  object-fit: contain;
+}
+
+.benefitContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.benefitTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.benefitDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imagesSection,
+  .contentSection {
+    width: 100%;
+  }
+
+  .contentSection {
+    padding: 24px;
+  }
+}
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.faqTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+}
+
+.faqDescription {
+  padding: 0 0 16px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+/* FitnessSignup.module.css */
+.container5 {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.heading5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.description5 {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.form1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input1 {
+  min-width: 50px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.button1 {
+  padding: 10px 15px;
+  background-color: #4a7c59;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.button1:hover {
+  background-color: #3a6a49;
+}
+
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .input,
+  .button {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .input,
+  .button {
+    width: 100%;
+  }
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contentSection {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .imageSection {
+    width: 100%;
+    justify-content: center;
+    order: 0;
+    margin-bottom: 24px;
+  }
+
+  .heading3 {
+    font-size: 24px;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .featuresContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featureItem {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plansContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planCard {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    padding: 1.5rem; /* Equal padding on mobile */
+    align-items: center; /* Center on mobile */
+  }
+
+  .title,
+  .subtitle {
+    text-align: center; /* Center text on mobile */
+  }
+
+  .imageContainer {
+    justify-content: center; /* Center image on mobile */
+  }
+}

@@ -1,7 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App.jsx';
 import Plans from './pages/Plans.jsx';
 import Credits from './pages/Credits.jsx';
@@ -69,7 +68,7 @@ const Layout = () => {
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <Layout />
+      <App />
     </Router>
   </StrictMode>
 );
