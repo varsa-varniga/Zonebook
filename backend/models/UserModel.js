@@ -147,7 +147,14 @@ const userSchema = mongoose.Schema({
         required:true,
         default:false,
     },
-    
+    Interests:{
+        type:[String],
+        required:true,
+    },
+    LocationData:{
+        type:[String],
+        required:true,
+    },
 
 })
 
