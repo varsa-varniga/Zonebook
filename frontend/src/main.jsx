@@ -1,7 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App.jsx';
 import Plans from './pages/Plans.jsx';
 import Credits from './pages/Credits.jsx';
@@ -18,6 +17,8 @@ import HowItWorks from './components/HowItWorks.jsx';
 import SubNavbar from './components/SubNavbar.jsx';
 import MapSection from './components/Map.jsx';
 import HeroPage from './pages/Heropage.jsx'
+import ListofMyBuisnessBlog from './pages/ListMyBuisness/blog.jsx';
+import './index.css'
 
 // Component to handle dynamic SubNavbar display
 const Layout = () => {
@@ -29,7 +30,8 @@ const Layout = () => {
     "/working",
     "/Browse-integration",
     "/calculate",
-    "/resource"
+    "/resource",
+    "/blogbusiness",
   ].includes(location.pathname);
 
   return (
@@ -56,6 +58,7 @@ const Layout = () => {
         <Route path="/Browse-integration" element={<Browse />} />
         <Route path="/calculate" element={<Earn />} />
         <Route path="/resource" element={<Earn />} />
+        <Route path="/blog" element={< ListofMyBuisnessBlog/>} />
       </Routes>
       <Footer />
       
@@ -66,7 +69,7 @@ const Layout = () => {
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <Layout />
+      <App />
     </Router>
   </StrictMode>
 );

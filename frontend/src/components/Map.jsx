@@ -82,12 +82,28 @@ const MapSection = () => {
       <Box sx={{ width: isMobile ? "100%" : "70%", display: "flex", flexDirection: "column", gap: 2, }}>
         {/* Search Box */}
         <TextField
-          fullWidth
-          value={searchQuery}
-          sx={{position:'absolute',zIndex:10000,bgcolor:'white',top:6,left:180,width:"20%",borderRadius:70,borderColor:'white'}}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-        />
+  fullWidth
+  value={searchQuery}
+  onChange={(e) => setSearchQuery(e.target.value)}
+  onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+  sx={{
+    position: 'absolute',
+    zIndex: 10000,
+    bgcolor: 'white',
+    top: 6,
+    left: 180,
+    width: '20%',
+    borderRadius: 70,
+    '& .MuiOutlinedInput-root': {
+      borderRadius: 70,
+      '& fieldset': {
+        border: 'none', // removes the border
+      },
+    },
+  }}
+  variant="outlined"
+/>
+
 
         {/* Map Container */}
         <Box

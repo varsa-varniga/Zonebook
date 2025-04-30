@@ -9,8 +9,10 @@ import {
 } from "@mui/material";
 import Yogacreditcard from "./Yogacreditcard.jsx";
 import CustomSlider from "../components/Creditlabels.jsx";
+import { useNavigate } from "react-router-dom";
 
 const CreditsInfo = () => {
+  const navigate = useNavigate();
   return (
     <Container
       maxWidth="lg"
@@ -23,32 +25,30 @@ const CreditsInfo = () => {
       {/* Section 1: How Credits Work */}
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h4" >
-            How your credits work
-          </Typography>
+          <Typography variant="h4">How your credits work</Typography>
           <Typography variant="body1" sx={{ mt: 1, color: "gray" }}>
-            Credits can be used to book a class or appointment. The amount of credits
-            needed to book varies by reservation type, location, popularity & time.
+            Credits can be used to book a class or appointment. The amount of
+            credits needed to book varies by reservation type, location,
+            popularity & time.
           </Typography>
         </Grid>
 
         {/* Credit Range Slider */}
         <Grid item xs={12} md={6} marginTop={"65px"}>
-          <CustomSlider/>
-         
+          <CustomSlider />
         </Grid>
       </Grid>
 
       {/* Section 2: Save with Membership */}
       <Grid container spacing={4} sx={{ mt: 5 }}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h4" >
+          <Typography variant="h4">
             Save with a <br />
-             membership
+            membership
           </Typography>
           <Typography variant="body1" sx={{ mt: 1, color: "gray" }}>
-            Exclusive member rates and in-app promotions for newly-added studios &
-            first-time visits can help you save some cash.
+            Exclusive member rates and in-app promotions for newly-added studios
+            & first-time visits can help you save some cash.
           </Typography>
         </Grid>
 
@@ -56,7 +56,6 @@ const CreditsInfo = () => {
         <Grid item xs={12} md={6}>
           <Yogacreditcard />
           <Box sx={{ mt: 2 }} />
-          
         </Grid>
       </Grid>
 
@@ -64,6 +63,7 @@ const CreditsInfo = () => {
       <Box sx={{ textAlign: "center", mt: 5 }}>
         <Button
           variant="contained"
+          onClick={() => navigate("/trialcomponent")}
           sx={{
             bgcolor: "#5B6647",
             color: "white",

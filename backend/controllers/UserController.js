@@ -4,11 +4,28 @@ const User = require("../models/UserModel");
 const userController = {
     register: async (req, res) => {
         try {
-            const { password, ...otherDetails } = req.body;
+            const {
+                email, 
+                password, 
+                FirstName, 
+                LastName, 
+                Interests, 
+                LocationData 
+              } = req.body.data;   
+              const processedEmail = email.split("@")[0];
+     
             const hashedPassword = await bcrypt.hash(password, 10);
-            const newUser = new User({ ...otherDetails, password: hashedPassword });
-            await newUser.save();
-            res.status(201).json({ message: "User registered successfully." });
+            const newUser = new User({ 
+                UserName:processedEmail,
+                email:email, 
+                password: hashedPassword,
+                FirstName:FirstName,
+                LastName:LastName,
+                Interests:Interests,
+                LocationData:LocationData });
+            await newUser.save().then(()=> {
+                res.status(201).json({ message: "User registered successfully." });
+            });
         } catch (error) {
             res.status(400).json({ error: error.message });
         }

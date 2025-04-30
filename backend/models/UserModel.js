@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const billingSchema = new mongoose.Schema({
     nameOnCard: {
         type: String,
-        required: true,
+        required: false,
         trim: true,
         minlength: 2,
         maxlength: 50,
@@ -16,7 +16,7 @@ const billingSchema = new mongoose.Schema({
     },
     expDate: {
         type: String,
-        required: true,
+        required: false,
         validate: {
             validator: function (v) {
                 return /^(0[1-9]|1[0-2])\/\d{4}$/.test(v);
@@ -26,7 +26,7 @@ const billingSchema = new mongoose.Schema({
     },
     postalCode: {
         type: String,
-        required: true,
+        required: false,
         validate: {
             validator: function (v) {
                 return /^[0-9]{5,6}$/.test(v);
@@ -36,7 +36,7 @@ const billingSchema = new mongoose.Schema({
     },
     cvc: {
         type: String,
-        required: true,
+        required: false,
         validate: {
             validator: function (v) {
                 return /^[0-9]{3,4}$/.test(v);
@@ -49,21 +49,22 @@ const billingSchema = new mongoose.Schema({
 
 const userSchema = mongoose.Schema({
     UserName:{
-        required:true,
+        required:false,
         type:String,
         unique: true,
+        sparse: true,
         minlength: 3, 
         maxlength: 30,
         validate: {
             validator: function(v) {
-                return /^[a-zA-Z0-9_]+$/.test(v); 
+                return v === null || /^[a-zA-Z0-9_]+$/.test(v);
             },
             message: props => `${props.value} is not a valid username! Only letters, numbers, and underscores are allowed.`
         },
-    },
+    },    
     email: {
         type: String,
-        required: true,
+        required: false,
         unique: true,
         lowercase: true,
         trim: true,
@@ -76,18 +77,13 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
+        required: false,
         minlength: 8, 
-        validate: {
-            validator: function (v) {
-                return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(v);
-            },
-            message: props => `Password is too weak! It must have at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.`
-        }
+        
     },
     FirstName: {
         type: String,
-        required: true,
+        required: false,
         minlength: 2,  
         maxlength: 50, 
         trim: true,    
@@ -100,7 +96,7 @@ const userSchema = mongoose.Schema({
     },
     LastName: {
         type: String,
-        required: true,
+        required: false,
         minlength: 2,
         maxlength: 50,
         trim: true,
@@ -113,22 +109,21 @@ const userSchema = mongoose.Schema({
     },
     phoneNumber: {
         type: String,
-        required: true,
-        unique: true,
+        required: false,
         validate: {
             validator: function (v) {
-                return /^[0-9]{10}$/.test(v);
+                return v == null || /^[0-9]{10}$/.test(v);
             },
             message: props => `${props.value} is not a valid phone number! It must be 10 digits.`
         }
     },
     CardDetails:{
         type:billingSchema,
-        required:true,
+        required:false,
     },
     Credits: {
         type: Number,
-        required: true,
+        required: false,
         min: 0,
         validate: {
             validator: function (v) {
@@ -139,21 +134,21 @@ const userSchema = mongoose.Schema({
     },
     IsActivePlan:{
         type:Boolean,
-        required:true,
+        required:false,
         default:false,
     },
     IsFreeTrial:{
         type:Boolean,
-        required:true,
+        required:false,
         default:false,
     },
     Interests:{
         type:[String],
-        required:true,
+        required:false,
     },
     LocationData:{
         type:[String],
-        required:true,
+        required:false,
     },
 
 })

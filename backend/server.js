@@ -27,6 +27,10 @@ app.use("/api/map",mapRoutes);
 app.use("/api/companies",companiesRoutes);
 app.use("/api/resources",resourcesRoutes);
 
+app.get('/api/try',(req,res)=>{
+  console.log(req.query);
+  res.json({data:"Backend Connected.."});
+})
 
 // Start Server
 app.listen(PORT, () => {
