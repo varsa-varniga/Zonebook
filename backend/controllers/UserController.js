@@ -13,7 +13,7 @@ const userController = {
                 LocationData 
               } = req.body.data;   
               const processedEmail = email.split("@")[0];
-     
+      console.log(req.body.data)
             const hashedPassword = await bcrypt.hash(password, 10);
             const newUser = new User({ 
                 UserName:processedEmail,
